@@ -1,4 +1,4 @@
-# Code Bubble Tutor
+# Cursor Brain
 
 Windows desktop assistant for explaining code from any app on screen.
 
@@ -68,9 +68,9 @@ Without a trusted certificate, the build will still be unsigned. A truly public 
 
 If the NSIS installer step fails on Windows due local code-sign helper privileges, use the generated portable build instead:
 
-- `release/win-unpacked/Code Bubble Tutor.exe`
-- `release/Code Bubble Tutor-Setup-0.1.0-x64.exe`
-- `release/Code Bubble Tutor-Portable-0.1.0-x64.exe`
+- `release/win-unpacked/Cursor Brain.exe`
+- `release/Cursor Brain-Setup-0.1.0-x64.exe`
+- `release/Cursor Brain-Portable-0.1.0-x64.exe`
 
 Local config file used at runtime:
 

@@ -5,7 +5,7 @@ const DEFAULT_CONFIG = {
   apiKey: "",
   endpoint: "https://openrouter.ai/api/v1/chat/completions",
   model: "deepseek/deepseek-chat",
-  openRouterTitle: "Code Bubble Tutor",
+  openRouterTitle: "Cursor Brain",
   explanationLevel: "intermediate",
   hotkey: "CommandOrControl+Shift+Space",
   useAccessibilityFirst: true

@@ -1,9 +1,9 @@
 {
-  "name": "desktop-code-assistant",
+  "name": "cursor-brain",
   "version": "0.1.0",
   "private": true,
   "author": "Adam F",
-  "description": "System-wide educational code assistant with overlay capture and floating explanation bubbles.",
+  "description": "Cursor Brain: system-wide educational code assistant with overlay capture and floating explanation bubbles.",
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
@@ -13,8 +13,8 @@
     "dist:signed": "electron-builder --win nsis"
   },
   "build": {
-    "appId": "local.desktop-code-assistant",
-    "productName": "Code Bubble Tutor",
+    "appId": "local.cursor-brain",
+    "productName": "Cursor Brain",
     "files": [
       "src/**/*",
       "package.json"

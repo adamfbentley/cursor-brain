@@ -273,7 +273,7 @@ function createTray() {
   }
 
   tray = new Tray(createTrayIcon());
-  tray.setToolTip("Code Bubble Tutor");
+  tray.setToolTip("Cursor Brain");
   tray.on("double-click", () => {
     showSettingsWindow();
   });
@@ -301,7 +301,7 @@ function createSettingsWindow() {
     height: 760,
     minWidth: 620,
     minHeight: 700,
-    title: "Code Bubble Tutor Settings",
+    title: "Cursor Brain Settings",
     autoHideMenuBar: true,
     backgroundColor: "#0b1220",
     webPreferences: {
@@ -456,7 +456,7 @@ async function showStatusBubble(message, loading = true) {
     explanation: {
       source: "status",
       captureSource: "assistant",
-      headline: loading ? "Waiting for selection" : "Code Bubble Tutor",
+      headline: loading ? "Waiting for selection" : "Cursor Brain",
       summary: message,
       notes: []
     }
