@@ -10,6 +10,7 @@ Windows desktop assistant for explaining code from any app on screen.
 - Region is captured, OCR'd, sent to OpenRouter, and explained.
 - Explanation appears in a floating bubble near the cursor.
 - App stays in the system tray and exposes a real settings window.
+- Ingest snippets of highlighted code creating a chained context for reasoning
 
 Hotkey interaction behavior:
 
@@ -18,9 +19,6 @@ Hotkey interaction behavior:
 - When selected text is detected (UIA or clipboard probe), a bubble appears near the cursor with explanation.
 - Overlay capture remains available manually from tray/settings.
 
-## Why This Is Not Bare Space
-
-System-wide interception of plain `Space` is not public-app friendly because it interferes with normal typing across Windows. The default global hotkey is `Ctrl+Shift+Space`, which opens the overlay safely from any app.
 
 ## Config
 
