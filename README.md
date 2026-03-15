@@ -1,6 +1,6 @@
 # Cursor Brain
 
-Windows desktop assistant for explaining code from any app on screen.
+Windows desktop assistant for explaining code from any environment on screen.
 
 ## Current MVP
 
