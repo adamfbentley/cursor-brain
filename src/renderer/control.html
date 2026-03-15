@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code Bubble Tutor</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <section class="panel control-card">
+      <div class="eyebrow">Background Desktop Assistant</div>
+      <h1>Code Bubble Tutor Settings</h1>
+      <p>The app runs from the system tray. Use the global hotkey for accessible-text capture first, then screen overlay fallback when needed.</p>
+
+      <div class="actions">
+        <button id="startBtn" class="primary">Start Selection</button>
+        <button id="saveBtn" class="primary">Save Settings</button>
+        <button id="configBtn" class="secondary">Open Config</button>
+        <button id="refreshBtn" class="secondary">Reload Config</button>
+      </div>
+
+      <section class="settings-grid">
+        <label class="field">
+          <span>OpenRouter API Key</span>
+          <input id="apiKeyInput" type="password" autocomplete="off" />
+        </label>
+        <label class="field">
+          <span>Endpoint</span>
+          <input id="endpointInput" type="text" />
+        </label>
+        <label class="field">
+          <span>Model</span>
+          <input id="modelInput" type="text" />
+        </label>
+        <label class="field">
+          <span>OpenRouter Title</span>
+          <input id="titleInput" type="text" />
+        </label>
+        <label class="field">
+          <span>Explanation Level</span>
+          <select id="levelInput">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Global Hotkey</span>
+          <input id="hotkeyInput" type="text" />
+        </label>
+        <label class="toggle-field">
+          <input id="uiaToggle" type="checkbox" />
+          <span>Try Windows accessibility text capture before OCR</span>
+        </label>
+      </section>
+
+      <div class="meta-grid">
+        <article class="meta-card">
+          <strong>Registered Hotkey</strong>
+          <div id="hotkeyValue">Loading...</div>
+        </article>
+        <article class="meta-card">
+          <strong>Model</strong>
+          <div id="modelValue">Loading...</div>
+        </article>
+        <article class="meta-card">
+          <strong>Explanation Level</strong>
+          <div id="levelValue">Loading...</div>
+        </article>
+        <article class="meta-card">
+          <strong>Config File</strong>
+          <div id="configPathValue">Loading...</div>
+        </article>
+      </div>
+
+      <div class="status" id="statusText">Close this window and the app stays in the tray.</div>
+    </section>
+  </div>
+  <script src="./control.js"></script>
+</body>
+</html>

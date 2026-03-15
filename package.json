@@ -1,0 +1,50 @@
+{
+  "name": "desktop-code-assistant",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Adam F",
+  "description": "System-wide educational code assistant with overlay capture and floating explanation bubbles.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "check": "node --check src/main.js && node --check src/preload.js && node --check src/services/config.js && node --check src/services/ocr.js && node --check src/services/windows-accessibility.js && node --check src/services/explainer.js && node --check src/renderer/control.js && node --check src/renderer/overlay.js && node --check src/renderer/bubble.js",
+    "dist": "electron-builder --win nsis portable",
+    "dist:signed": "electron-builder --win nsis"
+  },
+  "build": {
+    "appId": "local.desktop-code-assistant",
+    "productName": "Code Bubble Tutor",
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "artifactName": "${productName}-Setup-${version}-${arch}.${ext}",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "portable": {
+      "artifactName": "${productName}-Portable-${version}-${arch}.${ext}"
+    }
+  },
+  "dependencies": {
+    "screenshot-desktop": "^1.15.3",
+    "sharp": "^0.34.4",
+    "tesseract.js": "^6.0.1"
+  },
+  "devDependencies": {
+    "electron": "^37.2.3",
+    "electron-builder": "^26.0.12"
+  }
+}

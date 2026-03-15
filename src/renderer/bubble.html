@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explanation Bubble</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="bubble-body">
+  <div class="bubble-root" id="bubbleRoot">
+    <section class="bubble">
+      <header class="bubble-head-compact">
+        <h2 id="bubbleTitle">Explaining...</h2>
+        <div id="bubbleMode" hidden>Coupled to cursor</div>
+      </header>
+      <div class="bubble-loading" id="bubbleLoading" hidden>
+        <span>Analyzing selection...</span>
+      </div>
+      <div class="bubble-actions" id="bubbleActions">
+        <button class="bubble-action-btn" id="bubbleIngestBtn" type="button">Ingest Selection</button>
+        <button class="bubble-action-btn secondary" id="bubbleClearChainBtn" type="button">Clear Chain</button>
+        <div class="bubble-chain-status" id="bubbleChainStatus">Context: 0</div>
+        <button class="bubble-action-btn secondary" id="bubbleContextToggle" type="button">Show context</button>
+      </div>
+      <div class="bubble-status" id="bubbleStatus" hidden></div>
+      <div class="bubble-branch-row" id="bubbleBranchRow" hidden>
+        <div class="bubble-branch-status" id="bubbleBranchStatus"></div>
+        <button class="bubble-action-btn secondary" id="bubbleBranchBackBtn" type="button">Back to snippet</button>
+      </div>
+      <section class="bubble-section bubble-context-card context-panel" id="bubbleContextPanel" hidden>
+        <div class="section-label">Context Details</div>
+        <pre id="bubbleContextVerdict"></pre>
+        <div class="context-list-wrap">
+          <div class="section-label context-list-label">Ingested Items</div>
+          <ul class="context-list" id="bubbleContextList"></ul>
+        </div>
+      </section>
+      <div class="bubble-scroll" id="bubbleScroll">
+        <section class="bubble-section bubble-code-card">
+          <div class="code-card-head">
+            <div class="section-label">Selected Code</div>
+            <div class="code-card-meta" id="bubbleSelectedCodeMeta"></div>
+            <button class="code-card-toggle" id="bubbleSelectedCodeToggle" type="button">Show code</button>
+          </div>
+          <div class="code-window" id="bubbleCodeWindow">
+            <pre id="bubbleSelectedCode">Waiting for selection.</pre>
+          </div>
+        </section>
+        <section class="bubble-section bubble-summary-card">
+          <div class="section-label">Logic Summary</div>
+          <pre id="bubbleSummary">Waiting for explanation.</pre>
+        </section>
+        <section class="bubble-section">
+          <div class="section-label">Line Walkthrough</div>
+          <ol class="note-list" id="bubbleNotes"></ol>
+        </section>
+        <section class="bubble-section" id="bubbleTermsSection">
+          <div class="section-label">Key Terms</div>
+          <div class="term-list" id="bubbleTerms"></div>
+        </section>
+      </div>
+      <div class="bubble-resize-handle" id="bubbleResizeHandle" title="Hold Shift to resize"></div>
+    </section>
+  </div>
+  <script src="./bubble.js"></script>
+</body>
+</html>
